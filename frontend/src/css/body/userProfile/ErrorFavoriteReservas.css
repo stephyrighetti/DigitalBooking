@@ -1,0 +1,26 @@
+.container-message-error{
+  height: 100vh;
+}
+
+.container-error-fav-res{
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 50px;
+  margin: 20px;
+  background-color: var(--blanco);
+  color: var(--gris);
+  border: 1px solid #dfe4ea;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.icon-error-fav-res{
+  font-size: 30px;
+  padding-top: 5px;
+}
+
+.text-error-fav-res{
+  align-self: center;
+  margin-left: 10px;
+}

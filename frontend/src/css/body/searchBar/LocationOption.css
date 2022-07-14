@@ -1,0 +1,43 @@
+.container-option{
+    display: flex;
+    border-bottom: 1px solid var(--amarillo);
+    width: 400px;
+    padding: 10px 0;
+    width: 94%;
+    cursor: pointer;
+}
+
+.container-option:hover{
+    background: #fff4ab85;
+}
+
+.locations-option-icon{
+    font-size: 23px;
+    color: var(--gris);
+    align-self: center;
+}
+
+.option-description-text{
+    padding-left: 15px;
+    text-align: left;
+}
+
+.city-name{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+.city-country{
+    color: var(--gris);
+    font-size: 14px;
+    font-weight: 500;
+    height: 50%;
+    text-align: start;
+}
+
+@media (max-width: 806px){
+    .city-name{
+        font-size: 13px;
+    }
+}

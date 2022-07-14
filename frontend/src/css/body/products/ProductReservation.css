@@ -1,0 +1,116 @@
+.container-product-reservation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    background-color: #efefef;
+    justify-content: center;
+  }
+  
+  .product-reservation-text {
+    color: var(--negro);
+    font-weight: 600;
+    font-size: 24px;
+    margin: 15px 0px 15px 40px;
+  }
+  
+  .container-reservation {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .container-calendar2 {
+    align-self: center;
+    padding: 0px 0px 0px 40px;
+    width: 60%;
+  }
+  
+  .container-button-reservation {
+    height: 150px;
+    background-color: var(--blanco);
+    box-shadow: 0px 2px 2px 0px #00000044;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    margin: 50px;
+  }
+  
+  .text-button-reservation {
+    text-align: start;
+    padding: 5px 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .button-reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+    font-size: 16px;
+    font-weight: 500;
+    border-style: none;
+    background-color: var(--amarillo);
+    border-radius: 5px;
+    color: var(--blanco);
+    text-decoration: none;
+  }
+  
+  /* Responsive TABLET */
+  @media (max-width: 768px) {
+    .container-reservation {
+      flex-direction: column;
+    }
+    .container-button-reservation {
+      flex-direction: row;
+      width: 100%;
+      background: none;
+      box-shadow: none;
+      margin: 0px;
+      justify-content: center;
+    }
+    .text-button-reservation{
+      padding: 5px 40px;
+    }
+    .container-calendar2 {
+      padding: 0px;
+      width: 90%;
+      height: 100%;
+    }
+    .container-product-reservation {
+      min-height: 600px;
+    }
+    .button-reservation {
+      margin: 20px 40px;
+    }
+  }
+  
+  /* Responsive MOBILE */
+  @media (max-width: 414px) {
+    .container-product-reservation {
+      min-height: 650px;
+    }
+    .product-reservation-text {
+      margin: 15px 0px 15px 10px;
+      padding: 0px;
+    }
+    .container-reservation {
+      flex-direction: column;
+      justify-content: center;
+    }
+    .container-button-reservation {
+      flex-direction: column;
+    }
+    .button-reservation {
+      margin: 0%;
+    }
+    .container-calendar2 {
+      width: 90%;
+      padding: 0% 0%;
+    }
+  }
+  

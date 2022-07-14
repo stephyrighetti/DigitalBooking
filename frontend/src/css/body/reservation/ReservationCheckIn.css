@@ -1,0 +1,61 @@
+.container-checkin-time {
+  width: 100%;
+}
+
+.reservation-checkin-title {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 1rem;
+  color: var(--negro);
+}
+
+.container-checkin-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--blanco);
+  border: 1px solid #dfe4ea;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.checkin-text {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 10px 15px;
+}
+
+.checkin-icon {
+  padding-right: 5px;
+}
+
+.checkin-reservation-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkin-label {
+  font-weight: 500;
+  font-size: 12px;
+  margin: 0px 15px 10px 15px;
+}
+
+.checkin-select {
+  margin: 0px 0px 10px 15px;
+  width: 60%;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid #d3d3d36b;
+}
+
+.checkin-select:focus {
+  outline-style: none;
+}
+
+/* Responsive MOBILE */
+@media (max-width: 414px) {
+    .container-reservation-checkin {
+        margin-bottom: 20px;
+        width: 95%;
+      }
+}

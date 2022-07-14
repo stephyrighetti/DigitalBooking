@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.container-accommodations {
+    display: flex;
+    flex-direction: column;
+    background-color: #e2e2e2;
+    padding-bottom: 15px;
+}
+
+.title-accommodations {
+  padding: 15px 0 15px 30px;
+  color: var(--negro);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+.accommodation-list {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(2,1fr);
+  list-style: none;
+  width: 95%;
+  align-self: center;
+}
+
+
+/* Responsive TABLET */
+@media (max-width: 1337px){
+  .accommodation-list {
+    grid-template-columns: 1fr;
+  }
+}

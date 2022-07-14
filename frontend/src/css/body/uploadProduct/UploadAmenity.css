@@ -1,0 +1,48 @@
+.unpload-amenity {
+  background-color: white;
+  padding: 20px 0px 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.container-unploadamenity {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cointainer-check-input{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  height: 50px;
+}
+
+.check-input-amenity{
+  -webkit-appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--amarillo);
+  border: 1.5px solid var(--amarillo);
+  border-radius: 4px;
+}
+
+.check-input-amenity:checked {
+  background-image: url("../../../img/Vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--amarillo);
+  border: 1.5px solid var(--amarillo);
+}
+
+@media (max-width: 768px) {
+  .unpload-amenity {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 414px) {
+  .unpload-amenity {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

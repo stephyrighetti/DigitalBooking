@@ -1,0 +1,150 @@
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--grisClaro);
+  width: 100%;
+  height: 6em;
+  padding: 0px;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.header-button1:hover {
+  background-color: var(--amarillo);
+  color: var(--crema);
+  transition-duration: 0.5s;
+}
+.header-button2:hover {
+  background-color: var(--amarillo);
+  color: var(--crema);
+  transition-duration: 0.5s;
+}
+
+.container-logo-dh {
+  display: flex;
+  gap: 10px;
+  padding: 1em 0 0em 2.1em;
+}
+
+.logo-dh {
+  padding-right: 0.5em;
+}
+
+.container-header-user{
+  align-self: center;
+}
+
+.header-text {
+  display: flex;
+  margin-bottom: 0.5em;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--gris);
+}
+.slogan {
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+}
+
+.container-buttons-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  gap: 10px;
+  /* padding-right: 2%; */
+  padding: 0;
+  width: 400px;
+  margin: 0 1.5em 0 0;
+
+}
+
+.buttons-headers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}
+
+.header-button1, .header-button2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 5px 0px; */
+  width: 200px;
+  margin: 2%;
+  height: 40px;
+  background: #ffffff;
+  color: var(--amarillo);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid var(--amarillo);
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition-duration: 0.5s;
+
+}
+
+.container-hamburger-menu-none{
+  display: none;
+}
+
+.hamburger {
+  justify-self: center;
+  align-self: flex-end;
+  display: none;
+}
+
+/* Resposive TABLET  */
+@media (max-width: 913px) {
+  .header-text {
+    display: none;
+  }
+  .container-buttons-header {
+    width: 50%;
+  }
+}
+
+/* Resposive MOBILE  */
+@media (max-width: 414px) {
+  .container-header {
+    box-shadow: 0px 2px 2px 0px #00000044;
+    position: relative;
+  }
+
+  .container-buttons-header {
+    display: none;
+  }
+  .container-logo-dh {
+    padding: 1em 0 0 1em;
+  }
+
+  .hamburger {
+    text-align: end;
+    padding-right: 10px;
+    width: 100%;
+    width: 90%;
+    font-size: 30px;
+    color: var(--gris);
+    align-self: center;
+    display: block;
+  }
+  
+  .container-header-user {
+    display: none;
+  }
+  .container-hamburger-menu{
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100vh;
+  }
+
+}

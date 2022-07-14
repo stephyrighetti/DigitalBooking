@@ -1,0 +1,186 @@
+.container-searchBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--gris);
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 150px;
+  position: sticky;
+  top: 95.4px;
+  z-index: 1;
+}
+
+.title-searchBar {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.container-form-searchBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-search-searchBar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1150px;
+  gap: 0.5rem;
+}
+
+.container-inputs-searchBar{
+  width: 35%; 
+}
+
+.container-list-locations{
+  position: relative;
+  z-index: 1;
+  top: 15px;
+}
+
+.container-list-locations-date{
+  top:0px;
+}
+
+.container-location-search-searchBar{
+  display: flex;
+  width: 100%;
+}
+
+.icon-location-searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 2px 0 0 #00000044;
+  padding-left: 5px;
+  color: var(--gris);
+  cursor: pointer;
+  height: 40px;
+  pointer-events:none;
+
+}
+
+.input-location-search-searchBar, .input-date-searchBar {
+  border-radius: 0 5px 5px 0;
+  box-shadow: 0 2px 0 0 #00000044;
+  width: 100%;
+  height: 40px;
+}
+
+.input-location-search-searchBar::placeholder{
+  color: var(--gris);
+  padding-left: 0.7em;
+}
+
+.input-location-search-searchBar:focus{
+  outline: none;
+}
+
+.input-location-search-searchBar, .icon-location-searchBar, .input-date-searchBar{
+  margin: 1% 0% 2% 0;
+  border-style: none;
+}
+
+.container-date-search-searchBar{
+  display: flex;
+  width: 100%;
+}
+
+.input-date-search-searchBar{
+  margin: 1% 0% 2% 0;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 #00000044;
+  border-style: none;
+  width: 100%;
+}
+
+.input-date-searchBar{
+  padding: 0 0.2em;
+}
+
+.input-date-searchBar:focus{
+  outline: none;
+}
+
+.input-date-searchBar::placeholder{
+  color: var(--gris);
+  padding-left: 10px;
+}
+
+.button-search-searchBar{
+  color: white;
+  width: 180px;
+  background: var(--amarillo);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0 2px 2px 0 #00000044;
+  height: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  align-self: center;
+  margin-bottom: 3px;
+}
+
+.button-search-searchBar:hover{
+  color:var(--gris);
+  transition-duration: 0.5s;
+
+}
+
+@media (max-width: 768px) {
+  .title-searchBar {
+    font-size: 20px;
+  }
+  .form-search-searchBar {
+    width: 95%;
+  }
+  .button-search-searchBar {
+    margin-bottom: 2px;
+  }
+}
+
+@media (max-width: 414px) {
+  .container-searchBar {
+    height: 300px;
+    position: static;
+  }
+
+  .title-searchBar {
+    padding: 0 10px 0 10px;
+  }
+
+  .form-search-searchBar {
+    flex-direction: column;
+    width: 96%;
+    margin-top: 15px;
+  }
+
+  .container-inputs-searchBar{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .container-location-search-searchBar, .container-date-search-searchBar, .button-search-searchBar{
+    width: 100%;
+    height: 40px;
+  }
+
+  .button-search-searchBar{
+    margin: 7px 0 15px 0;
+  }
+  .container-list-locations{
+    top: 0;
+  }
+  .container-list-locations-date{
+    top:7px;
+  }
+
+}

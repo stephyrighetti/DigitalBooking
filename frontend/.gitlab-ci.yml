@@ -1,0 +1,59 @@
+cache:
+  paths:
+    - node_modules/
+    - .yarn
+    
+stages:
+  - build
+  #- test
+  - deploy
+
+build:
+  image: node:latest
+  stage: build
+  script:
+    - cd front-end
+    - yarn config set cache-folder .yarn
+    - yarn install --pure-lockfile --cache-folder .yarn
+    - CI=false yarn build
+  artifacts:
+    paths:
+      - ./front-end/build
+  only:
+    - develop
+#test:
+  #image: node:latest
+  #stage: test
+  #script:
+    #- echo "Running react test suite......"
+    #- cd front-end
+    #- yarn test
+  #only:
+    #- develop
+
+deploy:
+    image: python:latest
+    stage: deploy
+    before_script:
+        - apk update && apk add openssh-client bash
+        - mkdir -p ~/.ssh
+        - eval $(ssh-agent -s)
+        - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+        - touch ~/.ssh/config
+        - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        - ssh-keyscan $DEPLOY_SERVER_IP_FRONTEND >> ~/.ssh/known_hosts
+        - chmod 644 ~/.ssh/known_hosts
+    script:
+        #- aws s3 sync ./build/ s3://${S3_BUCKET}
+        - echo "Deploying started..."
+        - ls -la ./
+        - ssh ec2-user@$DEPLOY_SERVER_IP_FRONTEND "sudo systemctl stop nginx.service"
+        - scp -r ./front-end/build/ ec2-user@$DEPLOY_SERVER_IP_FRONTEND:/home/ec2-user/web/
+        - ssh ec2-user@$DEPLOY_SERVER_IP_FRONTEND "sudo rm -r /usr/share/nginx/html/"
+        - ssh ec2-user@$DEPLOY_SERVER_IP_FRONTEND "sudo cp -r /home/ec2-user/web/build/ /usr/share/nginx/html"
+        - ssh ec2-user@$DEPLOY_SERVER_IP_FRONTEND "sudo systemctl start nginx.service"
+        - echo "Finished deploying the app"
+    only:
+        - develop
+    #when: manual
+

@@ -1,0 +1,55 @@
+.reservation-form{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+.container-details{
+  height: 100%;
+}
+
+.reservation-data-title{
+  padding: 0.5rem 2rem 0rem 2rem;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--negro);
+}
+
+.container-data-calendar-checkin{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reservation-calendar-title{
+font-weight: 700;
+font-size: 24px;
+color: var(--negro);
+padding-bottom: 1rem;
+}
+
+
+/* Responsive TABLET */
+@media (max-width: 768px) {
+  .reservation-form{
+    grid-template-columns: 1fr;
+  }
+  .container-reservation-reservation {
+    flex-direction: column;
+  }
+  .container-data-calendar-checkin {
+    width: 100%;
+    align-items: center;
+  }
+  .container-details {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Responsive MOBILE */
+@media (max-width: 414px) {
+  .reservation-form{
+    padding: 1rem 1rem;
+  }
+}

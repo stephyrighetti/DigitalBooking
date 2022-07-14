@@ -1,0 +1,23 @@
+.container-category-option{
+    display: flex;
+    border-bottom: 1px solid #607D8B50;
+    width: 400px;
+    padding: 10px 0px;
+    width: 94%;
+}
+
+.container-category-option:hover{
+    background: var(--grisClaro);
+}
+
+.option-category-description-text{
+    padding-left: 15px;
+    height: 40px;
+}
+
+.category-title{
+    font-size: 16px;
+    font-weight: 600;
+    height: 50%;
+    color: black;
+}

@@ -1,0 +1,291 @@
+abbr[title] {
+  text-decoration: none;
+}
+
+.disable-dates{
+  text-decoration:line-through;
+}
+
+.container-calendar-product {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 5px 5px;
+}
+
+
+.react-calendar {
+  max-width: 100%;
+  background: #ffffff;
+  line-height: 1.125em;
+  gap: 2em;
+}
+
+.react-calendar--doubleView {
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+}
+
+/* bloque de calendario dias de la semana y numeros*/
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* cada fecha del calendario */
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+  border-radius: 50%;
+}
+
+/* al posicionarse sobre cada fecha  */
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+/* barra de meses */
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+/* botones de barra de meses */
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: white;
+  font-size: 1em;
+  text-align-last: justify;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+/* botones deshabilitados de la barra de meses */
+.react-calendar__navigation button:disabled {
+  color: var(--gris);
+}
+
+/* barra de navegacion entre meses */
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background: none;
+}
+
+/* texto de la barra de meses */
+.react-calendar__navigation__label__labelText {
+  text-transform: capitalize;
+}
+
+/* guioncito de la barra de meses */
+.react-calendar__navigation__label__divider {
+  color: white;
+}
+
+/* dias de la semana */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.75em;
+  text-transform: capitalize;
+}
+
+/* color de dias de la semana */
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+  color: var(--negro);
+}
+
+/* NO SE QUE HACE  */
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+/* dias de la semana */
+.react-calendar__month-view__days__day--weekend {
+  color: var(--negro);
+}
+
+/* dias del mes vecino (USO EL HIDDEN PARA QUE SIGA OCUPANDO ESPACIO)*/
+.react-calendar__month-view__days__day--neighboringMonth {
+  visibility: hidden;
+}
+
+/* seleccion de meses, años */
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 1em 0.5em;
+  text-transform: capitalize;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 0.2em;
+  line-height: 3em;
+  background-size: 2em;
+  background-clip: content-box;
+  background-color: rgba(0, 0, 255, 0);
+}
+
+.react-calendar__tile:disabled {
+  color: var(--gris);
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: var(--amarillo);
+}
+
+.react-calendar__tile--now {
+  background: #ffe6ca;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: var(--crema);
+}
+
+/* fecha actual*/
+.react-calendar__tile--hasActive {
+  background-color: #ffe6ca;
+
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background-color: black;
+
+}
+
+/* rango de fecha seleccionada */
+.react-calendar__tile--active {
+  background: var(--amarillo);
+  color: var(--negro);
+}
+
+/* fecha cliqueada sin el cursor encima */
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: var(--amarillo);
+}
+
+/* rango de fechas seleccionadas sin contar la que ve el cursor */
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: var(--amarillo);
+}
+
+.calendar-aplicar-product {
+  display: none;
+}
+
+.calendar-aplicar {
+  display: flex;
+  justify-content: flex-end;
+  background: white;
+  height: 3em;
+}
+
+.calendar-hr {
+  position: absolute;
+  left: 50.19%;
+  right: 49.81%;
+  top: 5.25%;
+  bottom: 9.88%;
+  border: 0.1em solid;
+  background-color: var(--amarillo);
+}
+.calendar-hr-product {
+  display: none;
+}
+
+/* Resposive TABLET  */
+@media (max-width: 1230px) {
+  .react-calendar__navigation__label__labelText {
+    font-size: 14px;
+  }
+
+  .react-calendar--doubleView .react-calendar__viewContainer {
+    background: #ffffff;
+  }
+
+  .react-calendar--doubleView .react-calendar__viewContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-calendar {
+    right: 2px;
+  }
+
+  .react-calendar--doubleView {
+    padding: 10px 10px 0px 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 5px 5px;
+    width: 100%;
+  }
+  .calendar-aplicar {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .calendar-buttonAplicar {
+    width: 95%;
+    margin: 0px;
+  }
+  .react-calendar__tile {
+    padding: 0%;
+    font-size: 12px;
+  }
+  .calendar-hr {
+    bottom: 15.88%;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 440px) {
+  .react-calendar,
+  .react-calendar *,
+  .react-calendar *:before,
+  .react-calendar *:after {
+    align-items: center;
+    width: auto;
+  }
+  .calendar-hr {
+    display: none;
+  }
+  .calendar-aplicar {
+    padding: 0px 0px 0px 0px;
+  }
+  .container-calendar {
+    width: 100%;
+  }
+  .calendar-aplicar {
+    display: flex;
+    justify-content: center;
+  }
+  .calendar-buttonAplicar {
+    width: 90%;
+    margin: 0%;
+  }
+  .react-calendar__tile {
+    padding: 0.6em;
+    font-size: 12px;
+  }
+}

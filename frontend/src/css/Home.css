@@ -1,0 +1,15 @@
+
+
+.container-body {
+    background-color: #dfdfdf;
+    min-height: calc(100vh - 60px - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%
+}
+
+/* Responsive Tablet */
+@media (max-width: 768px){
+    
+}

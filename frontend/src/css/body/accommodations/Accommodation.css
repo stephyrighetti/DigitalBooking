@@ -1,0 +1,253 @@
+
+.container-accommodation-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 #00000044;
+  background-color: #f7f7f7;
+}
+
+.container-img-accommodation {
+  position: relative;
+  object-fit: cover;
+  height: 300px;
+}
+
+.img-accommodation-card {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+}
+
+.icon-heart-accommodation{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.icon-heart-accommodation > label{
+  font-size: 30px;
+  color: #fff !important;
+}
+
+.icon-heart-accommodation-selected{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.icon-heart-accommodation-selected > label{
+  font-size: 30px;
+  color: red;
+}
+
+.container-data-accommodation {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-height: 300px;
+}
+
+.container-accommodation-info {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 100%;
+}
+
+.stars-score{
+  color: var(--amarillo);
+}
+
+.stars-score1{
+  color: var(--gris);
+  opacity: 30%;
+}
+
+.container-stars-accommodation{
+  display: flex;
+  flex-direction: row;
+}
+
+.text-name-accommodation {
+  font-weight: 600;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.text-stars-accommodation {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.5;
+  margin-right: 10px;
+
+}
+
+.container-qualification-accommodation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.text-number-qualification {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--negro);
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0 10px 0 10px;
+}
+
+.text-qualification {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 100px;
+  color: var(--negro);
+  text-align: end;
+}
+
+.container-location-info-accomodation {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.container-location-info-accomodation > div{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-location-accomodation {
+  display: flex;
+  box-shadow: none;
+  align-items: flex-start;
+}
+
+.text-location-part-1 {
+  color: var(--negro);
+  white-space: nowrap;
+  
+}
+
+.text-location-part-2 {
+  color: var(--amarillo);
+}
+
+.text-location-part-1,
+.text-location-part-2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.container-services-accomodation {
+  display: flex;
+  gap: 0.5rem;
+  margin: 5px 0;
+}
+
+.container-services-accomodation span {
+  font-size: 20px;
+  color: var(--gris);
+}
+
+.container-description-accommodation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.container-description-plus-mas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  justify-content: flex-start;
+}
+
+.text-description-accommodation {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--negro);
+  text-overflow: clip;
+  overflow: hidden;
+  height: 1.6em;
+}
+
+.text-description-accommodation-unclip {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--negro);
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.text-description-acommodation-mas{
+  cursor:pointer;
+  color: var(--amarillo);
+  font-size: 14px;
+  display: inline;
+  align-self: flex-start;
+}
+
+.button-more-description-accommodation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  background: var(--amarillo);
+  border-radius: 5px;
+  min-height: 2.5rem;
+  box-shadow: 0 2px 2px 0 #00000044;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-more-description-accommodation:hover{
+  color:var(--gris);
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 414px){
+  .container-accommodation-card{
+    height: 600px;
+    grid-template-columns: 1fr;
+  }
+  .container-img-accommodation{
+    height: 300px;
+  }
+
+  .img-accommodation-card {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .container-location-info-accomodation > div{
+    display: flex;
+  }
+
+  .container-data-accommodation{
+    height: 300px;
+  }
+
+  .text-location-part-1, 
+  .text-location-part-2, 
+  .text-description-accommodation-unclip{
+    white-space: none;
+  }
+}

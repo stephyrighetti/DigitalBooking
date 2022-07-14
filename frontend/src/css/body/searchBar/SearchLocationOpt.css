@@ -1,0 +1,21 @@
+.container-locations-options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 2px 0 #00000044;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: -16px;
+    overflow: auto;
+    max-height: 242px;
+}
+
+/*Responsive PLUS*/
+@media (max-width: 600px){
+    .container-locations-options{
+        top: 10px;
+    }
+}
+

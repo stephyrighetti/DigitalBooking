@@ -1,0 +1,23 @@
+workflow:
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: never
+    - if: $CI_COMMIT_BRANCH == 'develop'
+    
+stages:
+  - frontend
+  - backend
+
+frontend:
+  stage: frontend
+  only:
+    - develop
+  trigger:
+    include: front-end/.gitlab-ci.yml
+
+backend:
+  stage: backend
+  only:
+    - develop
+  trigger:
+    include: backend-base-de-datos/.gitlab-ci.yml
